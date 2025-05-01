@@ -32,7 +32,6 @@ class User(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
     tenant = relationship("Tenant", back_populates="users")
-    uploads = relationship("Upload", back_populates="user")  back_populates="users")
     uploads = relationship("Upload", back_populates="user")
     analyses = relationship("Analysis", back_populates="user")
     reports = relationship("Report", back_populates="user")
